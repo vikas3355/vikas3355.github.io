@@ -1,14 +1,236 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>V Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vikas | Technical Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    background: #111c32;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #0b1120, #172554);
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 55px);
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #cbd5e1;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #0284c7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+section {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #38bdf8;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.skills, .projects {
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #172554;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #263c68;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+}
+
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+section p {
+    color: #cbd5e1;
+}
+
+.contact a {
+    color: #38bdf8;
+}
+
+footer {
+    background: #111c32;
+    padding: 20px;
+    text-align: center;
+    color: #94a3b8;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 13px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <h1>Welcome to Vikas Website!</h1>
+<header>
+    <div class="logo">VIKAS.</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-<h2>My Projects</h2>
+<div class="hero" id="home">
+    <h1>Welcome to Vikas Website</h1>
+    <p>My Projects and Technical Portfolio</p>
+    <a href="#projects" class="btn">Explore My Projects</a>
+</div>
 
-<p>Welcome to my personal project website.</p>
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Hello! I am Vikas, an electronics and
+        technology enthusiast interested in
+        Embedded Systems, Electronics,
+        Programming and Innovation.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+        <div class="card">
+            <h3>Arduino</h3>
+            <p>Embedded system development</p>
+        </div>
+        <div class="card">
+            <h3>Python</h3>
+            <p>Programming and automation</p>
+        </div>
+        <div class="card">
+            <h3>HTML & CSS</h3>
+            <p>Website development</p>
+        </div>
+        <div class="card">
+            <h3>Digital Electronics</h3>
+            <p>Logic gates and digital circuits</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Gesture Controlled Wheelchair</h3>
+            <p>Wireless wheelchair control using
+            Arduino and MPU6050.</p>
+        </div>
+        <div class="card">
+            <h3>MealBot</h3>
+            <p>Smart cooking automation using
+            Arduino and Bluetooth.</p>
+        </div>
+        <div class="card">
+            <h3>IC Tester</h3>
+            <p>Digital IC testing using Arduino
+            and a display.</p>
+        </div>
+        <div class="card">
+            <h3>Smart Mirror</h3>
+            <p>Interactive smart mirror project
+            with voice commands.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Interested in technology and collaboration?</p>
+    <p>Email: Add your email address here</p>
+</section>
+
+<footer>
+    <p>© 2026 Vikas | My Technical Portfolio</p>
+</footer>
+
 </body>
 </html>
